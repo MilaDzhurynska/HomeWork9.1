@@ -12,5 +12,24 @@ public class TwoDimensionalArray {
             }
             System.out.println();
         }
+        /* Знайдіть суму всіх елементів в парних рядках (рядок 0, 2)
+        та суму всіх елементів в непарних рядках (рядок 1, 3).
+         */
+
+        int sumEvenRows = 0;
+        int sumOddRows = 0;
+
+        for (int i = 0; i < matrix.length; i++) {
+            int sumRows = 0;
+            for (int j = 0; j < matrix[i].length; j++){
+                sumRows += matrix[i][j];}
+            if (i % 2 == 0) {
+                sumEvenRows += sumRows; // парні рядки (0; 2)
+            } else {
+                 sumOddRows += sumRows; // непарні рядки (1; 3)
             }
         }
+        System.out.println("Сума елементів у парних рядках: " + sumEvenRows);
+        System.out.println("Сума елементів у непарних рядках: " + sumOddRows);
+    }
+}
